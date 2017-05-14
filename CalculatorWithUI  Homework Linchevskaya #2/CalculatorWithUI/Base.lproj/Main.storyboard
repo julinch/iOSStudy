@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorWithUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_bg" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-Si-MMw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jQn-fR-w2O">
+                                <rect key="frame" x="26" y="30" width="323" height="627"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" background="label_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Zc6-Ku-whn">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="96"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b9R-LB-nQu">
+                                        <rect key="frame" x="0.0" y="106" width="323" height="96.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-Mc-aUo">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="1" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" backgroundImage="butt_bg_pressed"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3F-Y6-0YP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nci-Kr-dd2">
+                                                <rect key="frame" x="66.5" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="2" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" backgroundImage="butt_bg_pressed"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzW-IR-8FO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-yT-UZf">
+                                                <rect key="frame" x="133" y="0.0" width="57" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="3" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" backgroundImage="butt_bg_pressed"/>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yp4-lg-7YG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSX-sL-lQt">
+                                                <rect key="frame" x="200" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="32"/>
+                                                <state key="normal" title="CE" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.78495791690603733" green="0.090620586433680969" blue="0.002228871698173283" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" backgroundImage="butt_bg_pressed"/>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8N-Gd-dd7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-OA-oND">
+                                                <rect key="frame" x="266.5" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="32"/>
+                                                <state key="normal" title="C" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.78495791690000005" green="0.090620586429999997" blue="0.0022288716980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" backgroundImage="butt_bg_pressed"/>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghw-Sa-L5F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qel-Ev-gqT">
+                                        <rect key="frame" x="0.0" y="212.5" width="323" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAx-Rt-g5U">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="4" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mdy-sK-ENf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joY-kh-aV4">
+                                                <rect key="frame" x="66.5" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="5" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwi-GD-1B1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URB-DT-1E8">
+                                                <rect key="frame" x="133" y="0.0" width="57" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="6" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMR-5F-qm0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5e-IQ-rii">
+                                                <rect key="frame" x="200" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="+" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vC3-l1-LaT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-Yw-nAX">
+                                                <rect key="frame" x="266.5" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="−" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wbp-5h-HuQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I2t-eP-63A">
+                                        <rect key="frame" x="0.0" y="318.5" width="323" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70y-ig-0uo">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="7" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NmJ-kk-y9u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-nc-upe">
+                                                <rect key="frame" x="66.5" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="8" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKG-cX-uSn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruy-1F-7Nf">
+                                                <rect key="frame" x="133" y="0.0" width="57" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="9" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KL5-Vr-qI2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2T-4i-11s">
+                                                <rect key="frame" x="200" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="×" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anc-HC-XVf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTx-XA-tfo">
+                                                <rect key="frame" x="266.5" y="0.0" width="56.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="÷" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPX-Ha-bMO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-qs-d4n">
+                                        <rect key="frame" x="0.0" y="424.5" width="323" height="96.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fga-td-ukd">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="±" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldj-Np-p0Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMa-MQ-ydM">
+                                                <rect key="frame" x="66.5" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="0" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AaE-LK-ddg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEI-tX-gtx">
+                                                <rect key="frame" x="133" y="0.0" width="57" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="." backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="putDot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2SI-Md-Fzf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rx-CR-9RY">
+                                                <rect key="frame" x="200" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="30"/>
+                                                <state key="normal" title="√" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taV-7U-eh4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-sE-qWu">
+                                                <rect key="frame" x="266.5" y="0.0" width="56.5" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="32"/>
+                                                <state key="normal" title="=" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAR-le-8Kr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5IJ-Yt-ciV">
+                                        <rect key="frame" x="0.0" y="531" width="323" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-08-9ZT">
+                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="24"/>
+                                                <state key="normal" title="sin" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yF2-8U-W1a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qf1-yU-3rJ">
+                                                <rect key="frame" x="83.5" y="0.0" width="73" height="96"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="24"/>
+                                                <state key="normal" title="cos" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Dl-Iw-UgM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwQ-j4-fKt">
+                                                <rect key="frame" x="166.5" y="0.0" width="73.5" height="96"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="24"/>
+                                                <state key="normal" title="pi" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EaV-JM-WDS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1a-QV-yeQ">
+                                                <rect key="frame" x="250" y="0.0" width="73" height="96"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="24"/>
+                                                <state key="normal" title="exp" backgroundImage="butt_bg_normal">
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAC-zC-TZr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jQn-fR-w2O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="FX8-ud-eUh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jQn-fR-w2O" secondAttribute="bottom" constant="10" id="gAt-Te-46P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jQn-fR-w2O" secondAttribute="trailing" constant="10" id="gWK-nb-JAr"/>
+                            <constraint firstItem="jQn-fR-w2O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="hgh-R6-V6l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputDisplay" destination="Zc6-Ku-whn" id="otL-V5-vM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="butt_bg_normal" width="290" height="220"/>
+        <image name="butt_bg_pressed" width="290" height="220"/>
+        <image name="label_bg" width="1205" height="280"/>
+        <image name="main_bg" width="1390" height="1680"/>
+    </resources>
+</document>
