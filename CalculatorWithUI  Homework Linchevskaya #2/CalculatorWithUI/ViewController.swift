@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         else
         {
             inputDisplay.text = sender.currentTitle!
-            didInputStarted = true
+            didInputStarted = true // lol kek
         }
     }
     
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         model.setOperand(currentValue)
         model.performOperation(sender.currentTitle!)
         currentDisplayValue = model.result ?? 0 // unwraps model.result if it contains any value or returns 0 if model.rezult is nil
-        didInputStarted = false
+        didInputStarted = false // Another comment
     }
     
     @IBAction func putDot(_ sender: UIButton) {
